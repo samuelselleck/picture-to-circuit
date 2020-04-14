@@ -107,8 +107,9 @@ if __name__ == "__main__":
 	if default_params['debug']:
 		ptc_debug.plot_debug_info(res['tracer'])
 		if default_params['debug_circuit']:
-			ptc_debug.truth_table(res['tracer'].info['circuit_io'])
-			ptc_debug.test_circuit(res['tracer'].info['circuit_io'])
+			circuits = res['tracer'].info['circuit_io']
+			ptc_debug.truth_table(circuits)
+			ptc_debug.test_circuit(circuits)
 	
    
 
